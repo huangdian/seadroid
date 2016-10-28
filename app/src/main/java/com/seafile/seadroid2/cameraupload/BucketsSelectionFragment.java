@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import android.widget.*;
 import android.content.Context;
 
-import com.seafile.seadroid2.R;
+import ah.xcs.ngga.netdisk.R;
 import com.seafile.seadroid2.SettingsManager;
 import com.seafile.seadroid2.cameraupload.GalleryBucketUtils;
 

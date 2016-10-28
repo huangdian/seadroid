@@ -15,7 +15,7 @@ import android.widget.TextView;
 
 import com.google.common.collect.Lists;
 import com.seafile.seadroid2.ui.NavContext;
-import com.seafile.seadroid2.R;
+import ah.xcs.ngga.netdisk.R;
 import com.seafile.seadroid2.data.*;
 import com.seafile.seadroid2.ui.activity.BrowserActivity;
 import com.seafile.seadroid2.util.Utils;

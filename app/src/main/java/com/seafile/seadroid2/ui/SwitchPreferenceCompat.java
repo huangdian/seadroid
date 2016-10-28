@@ -6,7 +6,7 @@ import android.os.Build;
 import android.preference.CheckBoxPreference;
 import android.util.AttributeSet;
 
-import com.seafile.seadroid2.R;
+import ah.xcs.ngga.netdisk.R;
 
 /**
  * SwitchCompat is a version of the Switch widget which on devices back to API v7.

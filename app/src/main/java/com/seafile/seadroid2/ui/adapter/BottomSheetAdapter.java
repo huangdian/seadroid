@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import com.joanzapata.iconify.fonts.MaterialCommunityIcons;
 import com.joanzapata.iconify.widget.IconTextView;
-import com.seafile.seadroid2.R;
+import ah.xcs.ngga.netdisk.R;
 import com.seafile.seadroid2.data.EventDetailsFileItem;
 import com.seafile.seadroid2.data.EventDetailsTree;
 

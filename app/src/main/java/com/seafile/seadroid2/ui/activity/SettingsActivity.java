@@ -10,7 +10,7 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.Window;
 
-import com.seafile.seadroid2.R;
+import ah.xcs.ngga.netdisk.R;
 import com.seafile.seadroid2.ui.fragment.SettingsFragment;
 
 public class SettingsActivity extends BaseActivity implements Toolbar.OnMenuItemClickListener {

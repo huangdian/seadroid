@@ -3,6 +3,7 @@ package com.seafile.seadroid2;
 import android.app.Application;
 import android.content.Context;
 
+import com.github.kevinsawicki.http.HttpRequest;
 import com.joanzapata.iconify.Iconify;
 import com.joanzapata.iconify.fonts.MaterialCommunityModule;
 import com.nostra13.universalimageloader.cache.disc.impl.UnlimitedDiscCache;
@@ -15,15 +16,16 @@ import com.seafile.seadroid2.data.StorageManager;
 import com.seafile.seadroid2.gesturelock.AppLockManager;
 
 import java.io.File;
-import java.security.Security;
 
 public class SeadroidApplication extends Application {
     private static Context context;
-    
+
     public void onCreate() {
         super.onCreate();
         Iconify.with(new MaterialCommunityModule());
-
+        //全局代理
+        HttpRequest.proxyHost("127.0.0.1");
+        HttpRequest.proxyPort(7001);
         SeadroidApplication.context = getApplicationContext();
         initImageLoader(getApplicationContext());
 
@@ -34,9 +36,9 @@ public class SeadroidApplication extends Application {
     public static Context getAppContext() {
         return SeadroidApplication.context;
     }
-    
+
     public static void initImageLoader(Context context) {
-        
+
         File cacheDir = StorageManager.getInstance().getThumbnailsDir();
         // This configuration tuning is custom. You can tune every option, you may tune some of them,
         // or you can create default configuration by

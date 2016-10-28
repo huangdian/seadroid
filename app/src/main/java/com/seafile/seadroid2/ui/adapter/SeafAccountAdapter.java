@@ -1,7 +1,7 @@
 package com.seafile.seadroid2.ui.adapter;
 
 import android.content.Context;
-import com.seafile.seadroid2.R;
+import ah.xcs.ngga.netdisk.R;
 
 /**
  * Adapter for showing account in a list view.

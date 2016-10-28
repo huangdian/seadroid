@@ -2,7 +2,7 @@ package com.seafile.seadroid2.ui.fragment;
 
 import android.os.Bundle;
 import android.util.Log;
-import com.seafile.seadroid2.R;
+import ah.xcs.ngga.netdisk.R;
 import com.seafile.seadroid2.transfer.DownloadTaskInfo;
 import com.seafile.seadroid2.transfer.TaskState;
 import com.seafile.seadroid2.transfer.TransferTaskInfo;

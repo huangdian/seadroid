@@ -6,8 +6,9 @@ import android.text.TextUtils;
 import android.util.Log;
 
 import com.google.common.base.Objects;
-import com.seafile.seadroid2.BuildConfig;
 import com.seafile.seadroid2.util.Utils;
+
+import ah.xcs.ngga.netdisk.BuildConfig;
 
 public class Account implements Parcelable, Comparable<Account> {
     private static final String DEBUG_TAG = "Account";

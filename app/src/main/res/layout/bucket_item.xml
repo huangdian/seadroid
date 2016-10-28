@@ -9,8 +9,8 @@
         android:layout_height="150dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:src="@drawable/ic_launcher"
-        android:scaleType="centerCrop" />
+        android:src="@drawable/cloud"
+        android:scaleType="fitCenter" />
 
     <ImageView
         android:id="@+id/bucket_item_text_background"

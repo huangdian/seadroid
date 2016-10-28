@@ -39,7 +39,7 @@ import android.view.Window;
 import android.widget.FrameLayout;
 
 import com.google.common.collect.Lists;
-import com.seafile.seadroid2.R;
+import ah.xcs.ngga.netdisk.R;
 import com.seafile.seadroid2.SeafConnection;
 import com.seafile.seadroid2.SeafException;
 import com.seafile.seadroid2.SettingsManager;

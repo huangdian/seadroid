@@ -3,7 +3,7 @@ package com.seafile.seadroid2.ui.adapter;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import com.google.common.collect.Lists;
-import com.seafile.seadroid2.R;
+import ah.xcs.ngga.netdisk.R;
 import com.seafile.seadroid2.data.SeafRepo;
 
 import java.util.List;

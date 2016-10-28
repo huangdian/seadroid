@@ -4,9 +4,10 @@ import android.content.ContentResolver;
 import android.content.Context;
 import android.os.Bundle;
 
-import com.seafile.seadroid2.BuildConfig;
 import com.seafile.seadroid2.account.Account;
 import com.seafile.seadroid2.account.AccountManager;
+
+import ah.xcs.ngga.netdisk.BuildConfig;
 
 
 /**

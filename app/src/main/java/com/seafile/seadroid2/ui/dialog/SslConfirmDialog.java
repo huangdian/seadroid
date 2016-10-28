@@ -10,7 +10,7 @@ import android.view.LayoutInflater;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.seafile.seadroid2.R;
+import ah.xcs.ngga.netdisk.R;
 import com.seafile.seadroid2.account.Account;
 import com.seafile.seadroid2.data.CertificateInfo;
 import com.seafile.seadroid2.ssl.SSLTrustManager;

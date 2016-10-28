@@ -9,7 +9,7 @@ import android.util.AttributeSet;
 import android.util.Patterns;
 import android.widget.ArrayAdapter;
 
-import com.seafile.seadroid2.R;
+import ah.xcs.ngga.netdisk.R;
 
 import java.util.ArrayList;
 import java.util.Collection;

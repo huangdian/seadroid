@@ -24,7 +24,6 @@ import android.widget.Button;
 import android.widget.ListView;
 
 import com.google.common.collect.Lists;
-import com.seafile.seadroid2.R;
 import com.seafile.seadroid2.SeafConnection;
 import com.seafile.seadroid2.SeafException;
 import com.seafile.seadroid2.account.Account;
@@ -40,6 +39,8 @@ import com.seafile.seadroid2.util.Utils;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import ah.xcs.ngga.netdisk.R;
 
 
 public class AccountsActivity extends BaseActivity implements Toolbar.OnMenuItemClickListener{

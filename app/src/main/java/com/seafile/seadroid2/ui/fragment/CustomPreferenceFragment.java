@@ -16,7 +16,7 @@
 
 package com.seafile.seadroid2.ui.fragment;
 
-import com.seafile.seadroid2.R;
+import ah.xcs.ngga.netdisk.R;
 import com.seafile.seadroid2.ui.CustomPreferenceManagerCompat;
 import com.seafile.seadroid2.ui.CustomPreferenceManagerCompat.OnPreferenceTreeClickListener;
 

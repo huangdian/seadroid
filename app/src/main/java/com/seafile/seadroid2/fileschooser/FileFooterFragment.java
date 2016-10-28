@@ -1,7 +1,7 @@
 package com.seafile.seadroid2.fileschooser;
 
 
-import com.seafile.seadroid2.R;
+import ah.xcs.ngga.netdisk.R;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;

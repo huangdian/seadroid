@@ -2,7 +2,7 @@ package com.seafile.seadroid2.fileschooser;
 
 import java.util.List;
 
-import com.seafile.seadroid2.R;
+import ah.xcs.ngga.netdisk.R;
 
 import android.os.Bundle;
 import android.os.Environment;

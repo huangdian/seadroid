@@ -9,7 +9,7 @@ import android.support.v4.os.EnvironmentCompat;
 import android.text.format.Formatter;
 import android.util.Log;
 
-import com.seafile.seadroid2.R;
+import ah.xcs.ngga.netdisk.R;
 import com.seafile.seadroid2.SeadroidApplication;
 import com.seafile.seadroid2.SettingsManager;
 import com.seafile.seadroid2.account.Account;

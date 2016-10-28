@@ -41,7 +41,6 @@ import android.util.Log;
 
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
-import com.seafile.seadroid2.R;
 import com.seafile.seadroid2.SeadroidApplication;
 import com.seafile.seadroid2.SeafException;
 import com.seafile.seadroid2.account.Account;
@@ -63,15 +62,13 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
-import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.Callable;
 import java.util.concurrent.CancellationException;
 import java.util.concurrent.ConcurrentSkipListSet;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
-import java.util.concurrent.LinkedBlockingQueue;
-import java.util.concurrent.ThreadPoolExecutor;
-import java.util.concurrent.TimeUnit;
+
+import ah.xcs.ngga.netdisk.R;
 
 /**
  * DocumentProvider for the Storage Access Framework.
@@ -647,7 +644,7 @@ public class SeafileProvider extends DocumentsProvider {
 
         row.add(Root.COLUMN_ROOT_ID, rootId);
         row.add(Root.COLUMN_DOCUMENT_ID, docId);
-        row.add(Root.COLUMN_ICON, R.drawable.ic_launcher);
+        row.add(Root.COLUMN_ICON, R.drawable.cloud);
         row.add(Root.COLUMN_FLAGS, Root.FLAG_SUPPORTS_IS_CHILD | Root.FLAG_SUPPORTS_CREATE);
         row.add(Root.COLUMN_TITLE, account.getServerHost());
         row.add(Root.COLUMN_SUMMARY, account.getEmail());
@@ -667,7 +664,7 @@ public class SeafileProvider extends DocumentsProvider {
         row.add(Document.COLUMN_DISPLAY_NAME,account.getServerHost());
         row.add(Document.COLUMN_LAST_MODIFIED, null);
         row.add(Document.COLUMN_FLAGS, 0);
-        row.add(Document.COLUMN_ICON, R.drawable.ic_launcher);
+        row.add(Document.COLUMN_ICON, R.drawable.cloud);
         row.add(Document.COLUMN_SIZE, null);
         row.add(Document.COLUMN_MIME_TYPE, Document.MIME_TYPE_DIR);
     }

@@ -37,7 +37,7 @@ import android.widget.TextView;
 
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
-import com.seafile.seadroid2.R;
+import ah.xcs.ngga.netdisk.R;
 
 public class MultipleImageSelectionActivity extends NoSearchActivity implements
         GridViewSpecial.Listener, GridViewSpecial.DrawAdapter {

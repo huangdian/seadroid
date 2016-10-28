@@ -12,8 +12,9 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 
-import com.seafile.seadroid2.R;
 import com.seafile.seadroid2.ui.activity.BaseActivity;
+
+import ah.xcs.ngga.netdisk.R;
 
 /**
  * Shibboleth welcome page

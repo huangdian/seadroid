@@ -16,7 +16,7 @@ import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.widget.ImageView;
 
-import com.seafile.seadroid2.R;
+import ah.xcs.ngga.netdisk.R;
 
 /**
  * A fast circular ImageView perfect for profile images

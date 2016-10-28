@@ -1,7 +1,7 @@
 package com.seafile.seadroid2.cameraupload;
 
 import android.content.Context;
-import com.seafile.seadroid2.R;
+import ah.xcs.ngga.netdisk.R;
 import com.seafile.seadroid2.ui.adapter.AccountAdapter;
 
 /**

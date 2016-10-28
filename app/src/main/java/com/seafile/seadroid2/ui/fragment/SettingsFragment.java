@@ -20,7 +20,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.google.common.collect.Maps;
-import com.seafile.seadroid2.R;
+import ah.xcs.ngga.netdisk.R;
 import com.seafile.seadroid2.SeafException;
 import com.seafile.seadroid2.SettingsManager;
 import com.seafile.seadroid2.data.DatabaseHelper;

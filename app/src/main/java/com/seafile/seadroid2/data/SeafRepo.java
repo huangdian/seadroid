@@ -2,7 +2,7 @@ package com.seafile.seadroid2.data;
 
 import android.text.TextUtils;
 
-import com.seafile.seadroid2.R;
+import ah.xcs.ngga.netdisk.R;
 import com.seafile.seadroid2.SeadroidApplication;
 import com.seafile.seadroid2.SettingsManager;
 import com.seafile.seadroid2.util.PinyinUtils;

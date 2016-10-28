@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.seafile.seadroid2"
+    package="ah.xcs.ngga.netdisk"
     android:versionCode="60"
     android:versionName="2.1.6">
 
@@ -38,18 +38,18 @@
         android:name="com.seafile.seadroid2.SeadroidApplication"
         android:label="@string/app_name"
         android:theme="@style/AppTheme"
-        android:icon="@drawable/ic_launcher">
+        android:icon="@drawable/cloud">
 
         <activity android:name="com.seafile.seadroid2.ui.activity.AccountsActivity"
                   android:launchMode="singleTop"
                   android:label="@string/app_name">
         </activity>
 
-        <activity android:name=".account.ui.ShibbolethActivity"
+        <activity android:name="com.seafile.seadroid2.account.ui.ShibbolethActivity"
                   android:label="@string/app_name">
         </activity>
 
-        <activity android:name=".account.ui.ShibbolethAuthorizeActivity"
+        <activity android:name="com.seafile.seadroid2.account.ui.ShibbolethAuthorizeActivity"
                   android:label="@string/app_name">
         </activity>
 
@@ -81,8 +81,8 @@
                   android:label="@string/app_name">
         </activity>
 
-        <activity android:name=".account.ui.AccountDetailActivity"
-                  android:parentActivityName=".AccountsActivity"
+        <activity android:name="com.seafile.seadroid2.account.ui.AccountDetailActivity"
+                  android:parentActivityName="com.seafile.seadroid2.ui.activity.AccountsActivity"
                   android:label="@string/app_name">
         </activity>
 
@@ -115,12 +115,12 @@
                   android:label="@string/app_name">
         </activity>
 
-        <activity android:name=".account.ui.SeafileAuthenticatorActivity"
-                  android:parentActivityName=".AccountsActivity"
+        <activity android:name="com.seafile.seadroid2.account.ui.SeafileAuthenticatorActivity"
+                  android:parentActivityName="com.seafile.seadroid2.ui.activity.AccountsActivity"
                   android:label="@string/app_name">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".AccountsActivity" />
+                android:value="com.seafile.seadroid2.ui.activity.AccountsActivity" />
         </activity>
 
         <activity android:name="com.seafile.seadroid2.fileschooser.MultiFileChooserActivity"
@@ -142,7 +142,7 @@
                   android:label="@string/app_name">
         </activity>
 
-        <activity android:name=".ui.activity.GalleryActivity"
+        <activity android:name="com.seafile.seadroid2.ui.activity.GalleryActivity"
                   android:label="@string/app_name">
         </activity>
 
@@ -159,16 +159,16 @@
         </provider>
         <service android:name="com.seafile.seadroid2.transfer.TransferService" > </service>
         <service android:name="com.seafile.seadroid2.monitor.FileMonitorService" > </service>
-        <service android:name=".cameraupload.MediaObserverService" />
+        <service android:name="com.seafile.seadroid2.cameraupload.MediaObserverService" />
 
         <provider
-            android:name=".cameraupload.StubContentProvider"
+            android:name="com.seafile.seadroid2.cameraupload.StubContentProvider"
             android:authorities="${applicationId}.cameraupload.provider"
             android:label="@string/sync_provider_camera_upload"
             android:exported="false"
             android:syncable="true"/>
 
-        <service android:name=".account.AuthenticatorService" >
+        <service android:name="com.seafile.seadroid2.account.AuthenticatorService" >
             <intent-filter>
                 <action android:name="android.accounts.AccountAuthenticator" />
             </intent-filter>
@@ -176,7 +176,7 @@
         </service>
 
         <service
-                android:name=".cameraupload.CameraSyncService"
+                android:name="com.seafile.seadroid2.cameraupload.CameraSyncService"
                 android:exported="true">
             <intent-filter>
                 <action android:name="android.content.SyncAdapter"/>

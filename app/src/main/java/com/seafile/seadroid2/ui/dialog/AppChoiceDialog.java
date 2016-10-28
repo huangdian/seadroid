@@ -21,7 +21,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.google.common.collect.Lists;
-import com.seafile.seadroid2.R;
+import ah.xcs.ngga.netdisk.R;
 
 /**
  * Choose an app from a list of apps or custom actions

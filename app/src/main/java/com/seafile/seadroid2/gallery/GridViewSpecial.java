@@ -24,7 +24,7 @@ import android.widget.Scroller;
 import static com.seafile.seadroid2.gallery.Util.assertTrue;
 
 import com.google.common.collect.Maps;
-import com.seafile.seadroid2.R;
+import ah.xcs.ngga.netdisk.R;
 
 
 public class GridViewSpecial extends View {
