@@ -20,9 +20,9 @@ import ah.xcs.ngga.netdisk.R;
 
 /**
  * The Authenticator activity.
- *
+ * <p>
  * Called by the Authenticator and in charge of identifing the user.
- *
+ * <p>
  * It sends back to the Authenticator the result.
  */
 public class SeafileAuthenticatorActivity extends BaseAuthenticatorActivity {
@@ -56,7 +56,7 @@ public class SeafileAuthenticatorActivity extends BaseAuthenticatorActivity {
         String[] array = getResources().getStringArray(R.array.choose_server_array);
         ArrayAdapter<String> listAdapter = new ArrayAdapter<>(this, R.layout.list_item_authenticator, array);
 
-        ListView listView = (ListView)findViewById(R.id.account_create_list);
+        ListView listView = (ListView) findViewById(R.id.account_create_list);
         listView.setAdapter(listAdapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -103,6 +103,12 @@ public class SeafileAuthenticatorActivity extends BaseAuthenticatorActivity {
                 navigateUpOrBack(SeafileAuthenticatorActivity.this, null);
             }
         });
+
+        //直接跳入登录界面
+        Intent intent;
+        intent = new Intent(SeafileAuthenticatorActivity.this, AccountDetailActivity.class);
+        intent.putExtras(getIntent());
+        startActivityForResult(intent, SeafileAuthenticatorActivity.REQ_SIGNUP);
     }
 
     @Override
@@ -157,7 +163,7 @@ public class SeafileAuthenticatorActivity extends BaseAuthenticatorActivity {
             mAccountManager.removeAccount(oldAccount, null, null);
         }
 
-        Log.d(DEBUG_TAG, "adding new account "+newAccountName);
+        Log.d(DEBUG_TAG, "adding new account " + newAccountName);
         mAccountManager.addAccountExplicitly(newAccount, null, null);
 
         mAccountManager.setAuthToken(newAccount, Authenticator.AUTHTOKEN_TYPE, authtoken);

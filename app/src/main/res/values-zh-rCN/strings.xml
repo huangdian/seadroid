@@ -13,7 +13,7 @@
   <string name="delete_dir">删除文件夹</string>
   <string name="name_hint">名称</string>
   <string name="server_hint">服务器地址</string>
-  <string name="email_hint">邮箱或用户名</string>
+  <string name="email_hint">警号</string>
   <string name="passwd_hint">密码</string>
   <string name="passwd_min_len_limit_hint">密码(至少%d个字符)</string>
   <string name="passwd_confirmation_hint">请再次输入密码</string>
@@ -55,7 +55,7 @@
   <string name="err_passwd_too_short">密码太短</string>
   <string name="err_passwd_mismatch">两次输入的密码不一致</string>
   <string name="err_login_failed">登录失败</string>
-  <string name="err_wrong_user_or_passwd">邮箱或密码错误</string>
+  <string name="err_wrong_user_or_passwd">警号或密码错误</string>
   <string name="err_token_expired">授权已过期，请重新登录</string>
   <string name="upload">上传</string>
   <string name="uploaded">已上传</string>
@@ -159,7 +159,7 @@
   <string name="export_file">导出此文件</string>
   <string name="no_upload_tasks">无上传任务</string>
   <string name="no_download_tasks">无下载任务</string>
-  <string name="seahub_url_hint">注意：服务器地址应该包含端口号。比如www.example.com:8000</string>
+  <string name="seahub_url_hint">公安电脑请访问http://10.128.148.46:8000</string>
   <string name="copy_link">复制链接</string>
   <string name="share_file_link">分享此文件的链接</string>
   <string name="share_dir_link">分享此文件夹的链接</string>
@@ -338,16 +338,13 @@
   <string name="settings_about_author_title">关于我们</string>
   <string name="settings_about_author_info">
         <![CDATA[
-        <h5>Seafile安卓客户端</h5>
+        <h5>宁国公安网盘</h5>
         <p>%s</p>
         <h5>联系我们</h5>
         <p>
-            Twitter: Seafile<br>
-            邮箱: support@seafile.com<br>
+            电话：0563-4022789-3576<br>
+            邮箱: 18963709798@qq.com<br>
         </p>
-        <h5>贡献代码</h5>
-        <p>https://github.com/haiwen/seadroid.git</P>
-        <h5>版权 ©2013-2016 Seafile Ltd.</h5>
         ]]>
     </string>
   <string name="settings_advance_feature_title">高级特性</string>

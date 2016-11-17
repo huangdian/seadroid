@@ -11,6 +11,7 @@
             android:layout_marginLeft="@dimen/cb_padding_left"
             android:layout_marginStart="@dimen/cb_padding_left"
             android:layout_marginTop="@dimen/cb_padding_top"
+        android:visibility="gone"
             android:onClick="onHttpsCheckboxClicked"
             android:textSize="@dimen/cb_btn_txt_size"
             android:text="@string/accounts_https_hint"/>
@@ -25,6 +26,7 @@
 
         <android.support.design.widget.TextInputLayout
             android:id="@+id/server_hint"
+            android:visibility="gone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -36,6 +38,7 @@
                 android:layout_marginLeft="@dimen/et_margin_left"
                 android:layout_marginRight="@dimen/et_margin_right"
                 android:hint="@string/server_hint"
+                android:text="@string/app_url"
                 android:inputType="textUri"
                 android:textSize="@dimen/et_txt_size" />
         </android.support.design.widget.TextInputLayout>
