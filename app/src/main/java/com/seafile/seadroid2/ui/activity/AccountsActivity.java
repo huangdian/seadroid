@@ -330,6 +330,7 @@ public class AccountsActivity extends BaseActivity implements Toolbar.OnMenuItem
             return;
         }
 
+        //todo 加载图像存在错误
         LoadAvatarUrlsTask task = new LoadAvatarUrlsTask(avatarSize);
 
         ConcurrentAsyncTask.execute(task);
@@ -349,9 +350,10 @@ public class AccountsActivity extends BaseActivity implements Toolbar.OnMenuItem
 
         @Override
         protected List<Avatar> doInBackground(Void... params) {
+            //todo 加载头像url存在bug
             // reuse cached avatars
             avatars = avatarManager.getAvatarList();
-
+            if(1==1){ return avatars;}
             // contains accounts who don`t have avatars yet
             List<Account> acts = avatarManager.getAccountsWithoutAvatars();
 

@@ -1,16 +1,16 @@
 package com.seafile.seadroid2.ui.dialog;
 
-import android.support.v7.app.AlertDialog;
+import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
+import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import ah.xcs.ngga.netdisk.R;
 import com.seafile.seadroid2.account.Account;
 import com.seafile.seadroid2.data.CertificateInfo;
 import com.seafile.seadroid2.ssl.SSLTrustManager;
@@ -21,10 +21,13 @@ import java.net.URL;
 import java.security.cert.CertificateParsingException;
 import java.security.cert.X509Certificate;
 
+import ah.xcs.ngga.netdisk.R;
 
+@SuppressLint("ValidFragment")
 public class SslConfirmDialog extends DialogFragment {
     public interface Listener {
         void onAccepted(boolean rememberChoice);
+
         void onRejected();
     }
 
@@ -46,6 +49,7 @@ public class SslConfirmDialog extends DialogFragment {
     public SslConfirmDialog() {
     }
 
+
     public SslConfirmDialog(Account account, Listener listener) {
         this.listener = listener;
         this.account = account;
@@ -62,9 +66,9 @@ public class SslConfirmDialog extends DialogFragment {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         builder.setTitle(getString(R.string.ssl_confirm_title));
         LayoutInflater inflater = getActivity().getLayoutInflater();
-        LinearLayout view = (LinearLayout)inflater.inflate(R.layout.dialog_ssl_confirm, null);
+        LinearLayout view = (LinearLayout) inflater.inflate(R.layout.dialog_ssl_confirm, null);
 
-        messageText = (TextView)view.findViewById(R.id.message);
+        messageText = (TextView) view.findViewById(R.id.message);
         commonNameText = (TextView) view.findViewById(R.id.common_name);
         // altSubjNamesText = (TextView) view.findViewById(R.id.alt_subj_name);
         sha1Text = (TextView) view.findViewById(R.id.sha1);
@@ -90,7 +94,7 @@ public class SslConfirmDialog extends DialogFragment {
         }
         String msg = "";
         if (reason == SslFailureReason.CERT_NOT_TRUSTED) {
-            msg =getActivity().getString(R.string.ssl_confirm, host);
+            msg = getActivity().getString(R.string.ssl_confirm, host);
         } else {
             msg = getActivity().getString(R.string.ssl_confirm_cert_changed, host);
         }
@@ -131,7 +135,7 @@ public class SslConfirmDialog extends DialogFragment {
                 listener.onAccepted(true);
             }
         });
-        
+
         builder.setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {

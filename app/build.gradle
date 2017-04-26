@@ -8,8 +8,8 @@ android {
         applicationId 'ah.xcs.ngga.netdisk'
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 60
-        versionName "2.1.6"
+        versionCode 61
+        versionName "2.1.7"
         resValue "string", "authorities", applicationId + '.cameraupload.provider'
         resValue "string", "account_type", "com.seafile.seadroid2.account.api2"
         buildConfigField "String", "ACCOUNT_TYPE", '"com.seafile.seadroid2.account.api2"'
@@ -28,7 +28,7 @@ android {
             //storePassword System.console().readPassword("\n\$ Enter keystore password: ").toString()
             //keyAlias System.console().readLine("\n\$ Enter key alias: ")
             //keyPassword System.console().readPassword("\n\$ Enter key password: ").toString()
-
+//
             def props = new Properties()
             props.load(new FileInputStream(project.file("key.properties.example")))
             storeFile project.file(props.keyStore)
@@ -68,7 +68,7 @@ android {
                         def file = output.outputFile
                         if (variant.name == "release")
                             output.outputFile = new File(file.parent,
-                                    "seafile-" + defaultConfig.versionName + ".apk")
+                                    "ngga-netdisk-" + defaultConfig.versionName + ".apk")
                     }
                 }
             }

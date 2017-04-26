@@ -451,6 +451,7 @@ public class SeafConnection {
 
             // should return "\"http://gonggeng.org:8082/...\"" or "\"https://gonggeng.org:8082/...\"
             if (result.startsWith("\"http") && fileID != null) {
+                result = result.replaceAll("http://[0-9]+\\.[0-9]+\\.[0-9]+\\.[0-9]+:[0-9]+",account.server );
                 String url = result.substring(1, result.length() - 1);
                 return new Pair<String, String>(url, fileID);
             } else {
@@ -741,6 +742,7 @@ public class SeafConnection {
             String result = new String(req.bytes(), "UTF-8");
             // should return "\"http://gonggeng.org:8082/...\"" or "\"https://gonggeng.org:8082/...\"
             if (result.startsWith("\"http")) {
+                result=result.replaceAll("http://[0-9]+\\.[0-9]+\\.[0-9]+\\.[0-9]+:[0-9]+",account.server );
                 // remove the starting and trailing quote
                 return result.substring(1, result.length() - 1);
             } else

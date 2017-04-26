@@ -71,7 +71,9 @@ public class AccountDetailActivity extends BaseActivity implements Toolbar.OnMen
     private boolean serverTextHasFocus;
     private boolean isPasswddVisible;
 
-    /** Called when the activity is first created. */
+    /**
+     * Called when the activity is first created.
+     */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -114,7 +116,11 @@ public class AccountDetailActivity extends BaseActivity implements Toolbar.OnMen
             if (server.startsWith(HTTPS_PREFIX))
                 httpsCheckBox.setChecked(true);
 
-            serverText.setText(server);
+            if (null == server || "".equals(server)) {
+                serverText.setText(R.string.app_url);
+            } else {
+                serverText.setText(server);
+            }
             emailText.setText(email);
             emailText.requestFocus();
             seahubUrlHintText.setVisibility(View.GONE);
@@ -125,8 +131,8 @@ public class AccountDetailActivity extends BaseActivity implements Toolbar.OnMen
                 httpsCheckBox.setChecked(true);
             serverText.setText(defaultServerUri);
             emailText.requestFocus();
-       } else {
-            serverText.setText(HTTP_PREFIX);
+        } else {
+            serverText.setText(R.string.app_url);
             int prefixLen = HTTP_PREFIX.length();
             serverText.setSelection(prefixLen, prefixLen);
         }
@@ -322,7 +328,7 @@ public class AccountDetailActivity extends BaseActivity implements Toolbar.OnMen
     }
 
     private void setupServerText() {
-        serverText.setOnFocusChangeListener(new View.OnFocusChangeListener () {
+        serverText.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
                 Log.d(DEBUG_TAG, "serverText has focus: " + (hasFocus ? "yes" : "no"));
@@ -332,6 +338,7 @@ public class AccountDetailActivity extends BaseActivity implements Toolbar.OnMen
 
         serverText.addTextChangedListener(new TextWatcher() {
             private String old;
+
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
             }
@@ -357,14 +364,16 @@ public class AccountDetailActivity extends BaseActivity implements Toolbar.OnMen
         });
     }
 
-    /** Called when the user clicks the Login button */
+    /**
+     * Called when the user clicks the Login button
+     */
     public void login(View view) {
         String serverURL = serverText.getText().toString().trim();
         String email = emailText.getText().toString().trim();
         String passwd = passwdText.getText().toString();
 
         ConnectivityManager connMgr = (ConnectivityManager)
-            getSystemService(Context.CONNECTIVITY_SERVICE);
+                getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
 
         if (networkInfo != null && networkInfo.isConnected()) {
@@ -402,7 +411,7 @@ public class AccountDetailActivity extends BaseActivity implements Toolbar.OnMen
 
             // force the keyboard to be hidden in all situations
             if (getCurrentFocus() != null) {
-                InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+                InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
                 imm.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
             }
 
@@ -453,19 +462,19 @@ public class AccountDetailActivity extends BaseActivity implements Toolbar.OnMen
             if (err == SeafException.sslException) {
                 authTokenLayout.setVisibility(View.GONE);
                 SslConfirmDialog dialog = new SslConfirmDialog(loginAccount,
-                new SslConfirmDialog.Listener() {
-                    @Override
-                    public void onAccepted(boolean rememberChoice) {
-                        CertsManager.instance().saveCertForAccount(loginAccount, rememberChoice);
-                        resend();
-                    }
+                        new SslConfirmDialog.Listener() {
+                            @Override
+                            public void onAccepted(boolean rememberChoice) {
+                                CertsManager.instance().saveCertForAccount(loginAccount, rememberChoice);
+                                resend();
+                            }
 
-                    @Override
-                    public void onRejected() {
-                        statusView.setText(result);
-                        loginButton.setEnabled(true);
-                    }
-                });
+                            @Override
+                            public void onRejected() {
+                                statusView.setText(result);
+                                loginButton.setEnabled(true);
+                            }
+                        });
                 dialog.show(getSupportFragmentManager(), SslConfirmDialog.FRAGMENT_TAG);
                 return;
             } else if (err == SeafException.twoFactorAuthTokenMissing) {
@@ -528,12 +537,12 @@ public class AccountDetailActivity extends BaseActivity implements Toolbar.OnMen
                     return getString(R.string.two_factor_auth_invalid);
                 }
                 switch (e.getCode()) {
-                case HttpURLConnection.HTTP_BAD_REQUEST:
-                    return getString(R.string.err_wrong_user_or_passwd);
-                case HttpURLConnection.HTTP_NOT_FOUND:
-                    return getString(R.string.invalid_server_address);
-                default:
-                    return e.getMessage();
+                    case HttpURLConnection.HTTP_BAD_REQUEST:
+                        return getString(R.string.err_wrong_user_or_passwd);
+                    case HttpURLConnection.HTTP_NOT_FOUND:
+                        return getString(R.string.invalid_server_address);
+                    default:
+                        return e.getMessage();
                 }
             } catch (JSONException e) {
                 return e.getMessage();

@@ -1,7 +1,7 @@
 <?xml version="1.1" encoding="utf-8"?>
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name" translatable="false">宁国公安网盘</string>
-    <string name="app_url" translatable="false">http://10.128.148.46:8000</string>
+    <string name="app_url" translatable="false">http://127.0.0.1:6008</string>
     <string name="welcome_to_seafile">Welcome to Seafile</string>
     <string name="select_account">Choose an account to start</string>
     <string name="edit_account">Edit</string>

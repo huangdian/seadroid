@@ -3,7 +3,6 @@ package com.seafile.seadroid2;
 import android.app.Application;
 import android.content.Context;
 
-import com.github.kevinsawicki.http.HttpRequest;
 import com.joanzapata.iconify.Iconify;
 import com.joanzapata.iconify.fonts.MaterialCommunityModule;
 import com.nostra13.universalimageloader.cache.disc.impl.UnlimitedDiscCache;
@@ -24,8 +23,8 @@ public class SeadroidApplication extends Application {
         super.onCreate();
         Iconify.with(new MaterialCommunityModule());
         //全局代理
-        HttpRequest.proxyHost("127.0.0.1");
-        HttpRequest.proxyPort(7001);
+//        HttpRequest.proxyHost("127.0.0.1");
+//        HttpRequest.proxyPort(7001);
         SeadroidApplication.context = getApplicationContext();
         initImageLoader(getApplicationContext());
 
